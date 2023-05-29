@@ -1,0 +1,335 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgba(44, 44, 44, 0.94);
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.frame {
+  position: relative;
+  width: 700px;
+  height: 720px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.ovelay {
+  position: absolute;
+  height: 720px;
+  top: 25px;
+}
+
+.overlay img {
+  position: absolute;
+  height: 680px;
+  width: 700px;
+  top: 25px;
+  opacity: 0.3;
+  z-index: -1;
+  border-radius: 100px;
+  filter: brightness(50%) contrast(50%);
+}
+
+.image {
+  position: absolute;
+  top: 25px;
+  left: 0;
+  width: 700px;
+}
+
+.image img {
+  width: 100%;
+}
+
+.form {
+  font-family: "Segoe UI", sans-serif;
+  font-size: 10px;
+  position: absolute;
+  z-index: 9999;
+  bottom: 17px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: auto;
+  width: 200px;
+}
+
+.label {
+  margin-top: -68px;
+  margin-left: 30px;
+}
+
+.input {
+  margin-left: 45px;
+  margin-bottom: 25px;
+  width: 80px;
+}
+
+.buttons {
+  position: absolute;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  bottom: 33px;
+  left: 50px;
+  width: 600px;
+}
+
+:root {
+  --button-height: 3rem;
+  --color-text: rgba(0, 0, 0, 0.25);
+  --color-text-shadow: rgba(255, 255, 255, 0.15);
+  --color-page-bg: #b9b5aa;
+  --color-bg: #899095;
+  --color-bg-light: #969da3;
+  --color-bg-dark: #7d878f;
+  --color-overlay-light: rgba(255, 255, 255, 0.2);
+  --color-overlay-medium: rgba(0, 0, 0, 0.1);
+  --color-overlay-dark: rgba(0, 0, 0, 0.2);
+  --color-tab-focus: rgba(255, 255, 255, 0.15);
+}
+
+.red-button {
+  position: absolute;
+  --color-bg: #e44e55;
+  --color-bg-light: #e47479;
+  --color-bg-dark: #d13239;
+  bottom: 33px;
+  right: 260px;
+}
+
+.green-button {
+  --color-bg: #00a07d;
+  --color-bg-light: #00af8a;
+  --color-bg-dark: #008f70;
+}
+
+.blue-button {
+  --color-bg: #0066b4;
+  --color-bg-light: #3981ca;
+  --color-bg-dark: #004ead;
+}
+
+.yellow-button {
+  --color-bg: #ffc054;
+  --color-bg-light: #ffd996;
+  --color-bg-dark: #f2aa30;
+}
+
+.retro-button {
+  appearance: none;
+  box-sizing: border-box;
+  font-size: calc(var(--button-height) / 3);
+  font-family: "Open Sans", sans-serif;
+  background: var(--color-bg);
+  height: 48px;
+  width: 48px;
+  border-radius: 500px;
+  border: 0;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--color-text);
+  text-shadow: 1px 1px var(--color-text-shadow);
+  cursor: pointer;
+  margin: 6px 6px;
+  letter-spacing: 0.1em;
+  transition: all 200ms ease;
+  box-shadow: -1px -1px 1px var(--color-bg),
+    0 0 0 4px var(--color-overlay-medium), 1px 1px 1px var(--color-bg-dark),
+    inset 0 0 0 var(--color-overlay-dark),
+    inset 0.5rem 0.5rem 0.25rem var(--color-bg-light);
+}
+
+.retro-button-small {
+  appearance: none;
+  box-sizing: border-box;
+  font-size: calc(var(--button-height) / 3);
+  font-family: "Open Sans", sans-serif;
+  background: var(--color-bg);
+  height: 20px;
+  width: 20px;
+  border-radius: 500px;
+  border: 0;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--color-text);
+  text-shadow: 1px 1px var(--color-text-shadow);
+  cursor: pointer;
+  margin: 6px 6px;
+  letter-spacing: 0.1em;
+  transition: all 200ms ease;
+  box-shadow: -1px -1px 1px var(--color-bg),
+    0 0 0 4px var(--color-overlay-medium), 1px 1px 1px var(--color-bg-dark),
+    inset 0 0 0 var(--color-overlay-dark),
+    inset 0.5rem 0.5rem 0.25rem var(--color-bg-light);
+  z-index: 9999;
+}
+
+.retro-button::-moz-focus-inner {
+  outline: none;
+  border: none;
+}
+
+.d {
+  margin-bottom: 2px;
+}
+
+.green {
+  margin-top: 5px;
+}
+
+.retro-button:focus {
+  outline: none;
+  box-shadow: -1px -1px 1px var(--color-bg-dark),
+    0 0 0 4px var(--color-tab-focus), 1px 1px 1px var(--color-bg-dark),
+    inset 0 0 0 var(--color-overlay-dark),
+    inset 0.5rem 0.5rem 0.25rem var(--color-bg-light);
+}
+
+.retro-button:hover {
+  box-shadow: -1px -1px 1px var(--color-bg-dark),
+    0 0 0 4px var(--color-overlay-dark), 1px 1px 1px var(--color-bg-dark),
+    inset 0 0 0 var(--color-overlay-dark),
+    inset 0.5rem 0.5rem 0.25rem var(--color-bg-light);
+}
+
+.retro-button:active {
+  box-shadow: inset 1px 1px 1px var(--color-bg),
+    0 0 0 4px var(--color-overlay-dark),
+    inset -1px -1px 1px var(--color-bg-light),
+    inset 0.5rem 0.5rem 0.75rem var(--color-bg-dark),
+    inset 0.5rem 0.5rem 0.5rem var(--color-bg-light);
+}
+
+/* Timeline */
+
+.timeline {
+  z-index: -999;
+  margin-top: 0px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding-left: 250px;
+  transition: all 5s ease-out;
+  width: 13500px;
+  background-color: #fff;
+  padding-top: 130px;
+  padding-bottom: 100px;
+}
+
+div.Basic-Text-Frame {
+  background-color: yellow;
+}
+p.Basic-Paragraph {
+  color: #000000;
+  font-family: "Minion Pro", serif;
+  font-size: 12px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1.2;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  orphans: 1;
+  page-break-after: auto;
+  page-break-before: auto;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-transform: none;
+  widows: 1;
+  width: 181px;
+  padding: 0px 0px;
+  margin-right: 80px;
+}
+span.CharOverride-1 {
+  position: relative;
+  display: block;
+  margin-bottom: 12px;
+  color: #000000;
+  font-family: "SF UI  Text 2", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: bold;
+}
+span.CharOverride-2 {
+  color: #000000;
+  font-family: "SF UI  Text", sans-serif;
+  font-size: 12px;
+  line-height: 14px;
+  font-style: normal;
+  font-weight: normal;
+}
+span.CharOverride-3 {
+  color: #357ec7;
+  font-family: "Segoe UI", sans-serif;
+  font-size: 12px;
+  line-height: 14px;
+  font-style: normal;
+  font-weight: normal;
+}
+span.CharOverride-4 {
+  position: relative;
+  display: block;
+  font-family: "SF UI  Text 2", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+span.CharOverride-5 {
+  font-family: "SF UI  Text", sans-serif;
+  font-size: 12px;
+  line-height: 14px;
+  font-style: normal;
+  font-weight: normal;
+}
+span.CharOverride-6 {
+  position: relative;
+  display: block;
+  color: #357ec7;
+  font-family: "Avenir Heavy", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 900;
+  margin-bottom: 12px;
+}
+span.CharOverride-7 {
+  position: relative;
+  display: block;
+  color: #357ec7;
+  font-family: "Segoe UI", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+span.CharOverride-8 {
+  color: #357ec7;
+  font-family: "Avenir Book", sans-serif;
+  font-size: 12px;
+  line-height: 14px;
+  font-style: normal;
+  font-weight: normal;
+}
